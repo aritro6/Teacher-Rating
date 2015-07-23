@@ -597,14 +597,14 @@ Selection Process
 <br>
 
 # EXTRA CREDIT:
-MEDIUM: Find all the 3-player combinations have MORE at bats, in addition to the the rest of the moneyball criteria.
+**MEDIUM**: Find all the 3-player combinations have MORE at bats, in addition to the the rest of the moneyball criteria.  
 
-*Hint -->* You might want to use pythons `from itertools import combinations` for the extra credit
+**HARD**:  Find *all* the positions the players we lost played, then... return only 3-player combinations that also played the same positions and fit our other criteria.
 
-HARD:  Find *all* the positions the players we lost played, then... return only 3-player combinations that also played the same positions and fit our other criteria.
-
-
-
+**Hint** You might want to use this python library:  
+```python
+from itertools import combinations
+```
 ---
 * Python for Data Analysis: Chapter 5, 8, 9
 * [pandas homepage](http://pandas.pydata.org/)
