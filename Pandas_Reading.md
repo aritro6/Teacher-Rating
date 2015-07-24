@@ -1,5 +1,5 @@
-# `import pandas as pd`
-### HOW TO CREATE A DATAFRAME
+# More Pandas
+### How to create a DataFrame
 
 ```python
 In [1]: import pandas as pd
@@ -92,7 +92,7 @@ Out[26]:
 <br>
 
 # Indexing is your new bff.
-Indicies are just like columns, but for rows.  
+Indices are just like columns, but for rows.  
 ```python
 In [38]: ### HERE IS A DATAFRAME OF ALL THE 2012 BASEBALL HITTING STATS
 
@@ -111,7 +111,7 @@ Out[39]:
 298  acostma01    2012    NYN    0   0
 ```
 
-### HOW TO SET YOUR INDEX
+### How to set your Index
 
 ```python
 # use the set_index function and pass in the name of the column you would like to set as the index
@@ -130,7 +130,7 @@ KCA     abreuto01    2012   70   1
 ```
 
 
-### HOW TO USE YOUR INDEX
+### How to use your Index
 Now that your index is set, you can easily return items that match your request.
 ```python
 NOW YOU CAN EFFICIENTLY RETURN ALL VALUES THAT MATCH YOUR QUERY.
@@ -249,7 +249,7 @@ Out[45]: Timestamp('2004-01-01 00:00:00')
 pd.to_datetime( df[‘dt_col’], unit=’ns’)
 
 ```
-### DEALING WITH EPOCH TIME STAMPS
+### Dealing with Epoch TIMESTAMPS
 ```python
 In [61]: crazy_time = pd.read_clipboard(delimiter=',')
 
@@ -301,7 +301,7 @@ Out[70]:
 ```
 
 <br>
-# Date time index is so awesome!
+# Datetime index is so awesome!
 
 ```python
 In [82]: df.ix['2013-01-02': '2013-01-05']
@@ -668,7 +668,7 @@ ___
 
 <br>
 
-Zen Ben & Appalling Paul The Apple Snapper tell us how How to expand table output to include all columns w/o [...]:
+Zen Ben & Appalling Paul The Apple Snapper tell us how to expand table output to include all columns w/o [...]:
 >You set options for pandas, there are a number of options you can change, general format is:
 pd.set_option('option',new value)
 to change number of columns in output:
