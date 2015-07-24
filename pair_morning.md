@@ -20,9 +20,9 @@ First, we need to feature engineer our 'moneyball' statistics.  These statistics
 
 The Batting.csv file contains what are known as 'back of the card' stats.  These are the baseball stats that were considered important because they are on the back of every single baseball card.
 
-We will combine, twist, and turn the old features to create new features in an attempt to find better a better link to winning games.  This practice is called feature engineering.
+We will combine, twist, and turn the old features to create new features in an attempt to find better link to winning games.  This practice is called feature engineering.
 
-For example, a players batting average is calculated by taking the number of hits they have had, and divide it by the number of times they were at bat.  
+For example, a players batting average is calculated by taking the number of hits they've had, and dividing it by the number of times they were at bat.  
 
 Pandas is great, because if we want to create a new column in our DataFrame, we can do so on the fly just like this.  
 ``` df['new col'] = df['colA'] / df['colB'] ```
@@ -30,8 +30,8 @@ Pandas is great, because if we want to create a new column in our DataFrame, we 
 ## Your first job is to feature engineer three new statistics.
 The new stats you are calculating are Batting Average, OnBase Percentage, and Slugging Percentage.  
 Each stat should be added as a new column in dfBatting.  
-To get you started, I have done Batting Averge for you perfectly.  
-If you do not know *how* to calculate the new stats, use the links provided to figure out their equations.  You might need to reference the data's readme file to figure out what the abbreviations stand for.
+To get you started, I have done Batting Average for you perfectly.  
+If you do not know **how** to calculate the new stats, use the links provided to figure out their equations.  You might need to reference the data's readme file to figure out what the abbreviations stand for.
 
 1.  **Batting Average:**
   ``` dfBatting['BA'] =  dfBatting['H'] / dfBatting['AB'] ```
@@ -236,12 +236,12 @@ If you print dfBatting.tail() it should look like this.
 ___
 
 # Joining batting data with salary data.
-Now that we have our batting stats all clean and tight,  we want to be able to look up a players batting stat and see how much they are making. Since our dfBatting doesn't have any salary information...
+Now that we have our batting stats all clean and tight,  we want to be able to look up a player's batting stat and see how much they are making. Since our dfBatting doesn't have any salary information...
 
 ### Your next job is to merge the Batting.csv with the Salaries.csv
 1.  Load in Salaries.csv as ```dfSals```
-2.  If you print ```dfSals.yearID.min()```, you will notice that it only contains data from 1985 and above.  Since our dfBatting contains data froml like the 1800's a merge may get messy.  
-3.  **From dfBatting, remove all data that is from before 1985**
+2.  If you print ```dfSals.yearID.min()```, you will notice that it only contains data from 1985 and above.  Since our dfBatting contains data from the 1800's, a merge may get messy.  
+3.  **From dfBatting, remove all data before 1985**
 4.  Now that our data files are nice and clean, find a column (primary key) that you can use to merge the two dataframes with.  Use ```pd.merge()``` to merge the dfBatting and dfSals together as a new dataframe called ```mergeddf```.  
 5. Drop any columns that are repetitive, and also get rid of `G_old`.
 
@@ -443,7 +443,12 @@ ___
 <br>
 <br>
 # Summing our losses.  
-During the 2001-02 offseason, the Oakland A's lost three key free agents to larger market teams: first baseman 2000 AL MVP Jason Giambi (`giambja01`) to the New York Yankees, outfielder Johnny Damon (`damonjo01`) to the Boston Red Sox, and closing pitcher Jason Isringhausen (`isrinja01`) to the St. Louis Cardinals as well as infielder Rainer Gustavo "Ray" Olmedo (``'saenzol01'``).
+During the 2001-02 offseason, the Oakland A's lost three key free agents to larger market teams:  
+
+1. first baseman 2000 AL MVP Jason Giambi (`giambja01`) to the New York Yankees  
+2. outfielder Johnny Damon (`damonjo01`) to the Boston Red Sox  
+3. closing pitcher Jason Isringhausen (`isrinja01`) to the St. Louis Cardinals  
+4. as well as infielder Rainer Gustavo "Ray" Olmedo (``'saenzol01'``)
 
 ![](images/3ballplayers.png)
 
@@ -451,8 +456,9 @@ During the 2001-02 offseason, the Oakland A's lost three key free agents to larg
 
 
 * Using `mergeddf`, create a new dataframe that is just of the Oakland A's 2001 team (call it `oak2001`).
-* Tell me the stats for each these key players during their 2001 season at the Okaland A's
-* Put all of the players data we are losing into a new dataframe called `lostboysdf`. hint:  ```my_mask = oak2001['playerID'].isin(['list', 'of', 'names'])``` *
+* Tell me the stats for each of these key players during their 2001 season at the Oakland A's
+* Put all of the players data we are losing into a new dataframe called `lostboysdf`. hint:  
+* ```my_mask = oak2001['playerID'].isin(['list', 'of', 'names'])``` *
 * ```lostboysdf = oak2001[my_mask] ```
 
 Expected Output: (Your df may have additional stats, I just cut the df width for presentation purposes):
@@ -533,7 +539,7 @@ ___
 We need to find three players that have an average OBP of ???? or higher and the following
 constraints:
 * together have at least as many at bats as the players we lost
-* together cost less than 15 million bucks.
+* together cost less than 15 million bucks
 
 Selection Process
 
@@ -545,7 +551,7 @@ Selection Process
   * This is actually alot easier than it sounds if you use ```.sort()``` and your eyes.
   * Eliminate any players that have less than 50 at-bats...any fewer and they aren't *real* contributors to the team's offense 
  
-**There are many correct answers** here is just one: *I encourage you to do much better*
+**There are many correct answers** here is just one: **I encourage you to do much better**
 
  <table border="1" class="dataframe">
   <thead>
@@ -597,9 +603,9 @@ Selection Process
 <br>
 
 # EXTRA CREDIT:
-**MEDIUM:** Find all the 3-player combinations have MORE at bats, in addition to the the rest of the moneyball criteria.  
+**MEDIUM:** Find all 3-player combinations that have MORE at bats, in addition to the the rest of the moneyball criteria.  
 
-**HARD:**:  Find *all* the positions the players we lost played, then... return only 3-player combinations that also played the same positions and fit our other criteria.
+**HARD:**:  Find *all* the positions the players we lost played, then return only 3-player combinations that also played the same positions and fit our other criteria.
 
 **Hint:** You might want to use this python library:  
 ```python
