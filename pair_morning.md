@@ -1,4 +1,4 @@
-# This is the... <br>  Moneyball assignment.
+# Moneyball
 
 The ultimate goal for this assignment is to build a moneyball calculator for the Oakland A's head coach Billy Beane (played by Brad Pitt in the movie).   This calculator/software will find the data driven best players for the least amount of money.
 
