@@ -343,7 +343,7 @@ dt_object
 <tr><td>df.ix[0]</td><td>select row 0</td></tr>
 <tr><td>df.ix[5:100]</td><td>select rows 5 through 100</td></tr>
 <tr><td>df.ix[1,2,3,4]</td><td>select rows 1,2,3 and 4</td></tr>
-<tr><td>df.ix[0]['col']</td><td>select row and column, reterive cell value</td></tr>
+<tr><td>df.ix[0]['col']</td><td>select row and column, retrieve cell value</td></tr>
 <tr><td>del df['col']</td><td>delete or drop or remove a column</td></tr>
 <tr><td>df.drop('col', axis=1)</td><td>delete or drop or remove a column</td></tr>
 <tr><td>df.drop('row')</td><td>delete or drop or remove a row</td></tr>
@@ -352,11 +352,11 @@ dt_object
 <tr><td>solo_col = df['col']</td><td>make a variable that is equal the col</td></tr>
 <tr><td>just_values = df['col'].values</td><td>returns an array with just the values, NO INDEX</td></tr>
 <tr><td>df[ (df['col'] == 'condition') ]</td><td>return df when col is equal to condition</td></tr>
-<tr><td>df[ (df['col 1'] == 'boobies') & (df['col 2'] > 75) ]</td><td>return df when one col meets this condition AND another col meets another condition</td></tr>
+<tr><td>df[ (df['col 1'] == 'cheese') & (df['col 2'] > 75) ]</td><td>return df when one col meets this condition AND another col meets another condition</td></tr>
 <tr><td>df['col'][ (df['col1'] == 'this') & (df['col2'] > 'that' ) ] = 'new val'</td><td>set col1 to new value when col1 == this, and col2 == that if this then than </td></tr>
-<tr><td>df.groupby('col').sum()</td><td>group by groupby a column and SUM all other (that can acutally be summed</td></tr>
+<tr><td>df.groupby('col').sum()</td><td>group by groupby a column and SUM all other (that can actually be summed</td></tr>
 <tr><td>df.plot(kind='bar') **kind= 'bar' or 'line' or 'scatter' or 'kde' or 'pie' or 'area'</td><td>make a bar plot</td></tr>
-<tr><td>alist = df['cols'].values</td><td>extract just the values of a column into a list to use somewhere else ususally</td></tr>
+<tr><td>alist = df['cols'].values</td><td>extract just the values of a column into a list to use somewhere else usually</td></tr>
 <tr><td>a_matrix = df.as_matrix()</td><td>extract just the values of a whole dataframe as a matrix; this will remove the index and the column names. I use it usually to put into a like sklearn or some other algo</td></tr>
 <tr><td>df.sort(axis=1)</td><td>sort by column names ie; if your df columns were 'z' 'd' 'a' df.sort(axis=1) would reorder columns to be 'a' 'd' 'z</td></tr>
 <tr><td>df.sort('col' , axis=0)</td><td>will sort by the 'col' column with lowest vals at top</td></tr>
@@ -470,7 +470,7 @@ Load delimited data from a file, URL, or file-like object. Use comma as default 
 
 `pd. read_fwf()` Read data in fixed-width column format (that is, no delimiters)
 
-`pd.read_clipboard()` Create a dataframe from your own damn cliboard!!! _wtf! im seriously_
+`pd.read_clipboard()` Create a dataframe from your own clipboard!!! _yow!!_
 
 
 `df.to_csv('output.csv', sep='|', index=False, header=False )` Using DataFrame’s to_csv method, we can write the data out to a comma-separated file:
@@ -754,9 +754,9 @@ df['Timestamp'] = pd.to_datetime(df['Timestamp'])
 # VERY IMPORT THAT YOUR DATETIME OBJECT IS YOUR INDEX
 df = df.set_index('Timestamp')
 
-# df.resample() == df.groupby()       (not excatly, but close enough)
+# df.resample() == df.groupby()       (not exactly, but close enough)
 # YOU CAN THINK OF LIKE  df.groupby()
-# RUEL CAN BE   rule='D'<for day> , rule='Y', rule='M' for month, or rule='5min' <for 5 min chunks>
+# RULE CAN BE   rule='D'<for day> , rule='Y', rule='M' for month, or rule='5min' <for 5 min chunks>
 grouped_dataframe = df.resample(rule='1min', how='count')
 
 ```
