@@ -2,7 +2,7 @@
 
 The ultimate goal for this assignment is to build a moneyball calculator for the Oakland A's head coach Billy Beane (played by Brad Pitt in the movie).   This calculator/software will find the data driven best players for the least amount of money.
 
-Time permitting, we will re-appropiate this calculator to create data driven charts that illustrate why we made our decisions. As if we needed the ammo to bring to the big board meeting with the owner of the baseball team to convince them to make data-driven changes.
+Time permitting, we will re-appropriate this calculator to create data driven charts that illustrate why we made our decisions. As if we needed the ammo to bring to the big board meeting with the owner of the baseball team to convince them to make data-driven changes.
 
 This may sound a bit complex and/or difficult...but you'll be surprised just how easy it will be!!!
 <br>
@@ -16,7 +16,7 @@ The tools and all the data to build this calculator are freely available.  What 
 First, we need to feature engineer our 'moneyball' statistics.  These statistics are built from the standard, existing baseball statistics that Billy Beane believes will lead to earning more runs, and thus, winning more games.  
 
 ## Digging into hitting stats with the Batting.csv
-** Inside the data folders is a text file named `readme2013.txt`, this is the documenation for the data files. **
+** Inside the data folders is a text file named `readme2013.txt`, this is the documentation for the data files. **
 
 The Batting.csv file contains what are known as 'back of the card' stats.  These are the baseball stats that were considered important because they are on the back of every single baseball card.
 
@@ -548,7 +548,7 @@ Selection Process
   * Use the salary data from 2001 as your roster.  For the purpose of this exercise, assume all players are free agents (i.e. available to be traded to the A's).  
   * Create a new dataframe called all2001 from your ```mergeddf``` that contains ALL players.
   * Narrow down the stats to just keep ```['playerID', 'teamID_x','AB','HR', 'OBP', 'SLG', 'salary']```
-  * This is actually alot easier than it sounds if you use ```.sort()``` and your eyes.
+  * This is actually a lot easier than it sounds if you use ```.sort()``` and your eyes.
   * Eliminate any players that have less than 50 at-bats...any fewer and they aren't *real* contributors to the team's offense 
  
 **There are many correct answers** here is just one: **I encourage you to do much better**
