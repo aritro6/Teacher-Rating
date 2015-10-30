@@ -524,7 +524,7 @@ Expected Output: (Your df may have additional stats, I just cut the df width for
   </tbody>
 </table>
 
-Also, tally their total at bats
+Also, return their total at bats ('AB')
 ```python
         playerID teamID_x   AB  HR       SLG       OBP   salary
 4955   damonjo01      OAK  '???'   9  0.363354  0.??????  7100000
