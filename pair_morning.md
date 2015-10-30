@@ -242,7 +242,7 @@ Now that we have our batting stats all clean and tight,  we want to be able to l
 1.  Load in Salaries.csv as ```dfSals```
 2.  If you print ```dfSals.yearID.min()```, you will notice that it only contains data from 1985 and above.  Since our dfBatting contains data from the 1800's, a merge may get messy.  
 3.  **From dfBatting, remove all data before 1985**
-4.  Now that our data files are nice and clean, find a column (primary key) that you can use to merge the two dataframes with.  Use ```pd.merge()``` to merge the dfBatting and dfSals together as a new dataframe called ```mergeddf```.  
+4.  Now that our data files are nice and clean, find a column or columns that you can use to merge the two dataframes with.  Use ```pd.merge()``` to merge the dfBatting and dfSals together as a new dataframe called ```mergeddf```.  
 5. Drop any columns that are repetitive, and also get rid of `G_old`.
 
 Expected results:
