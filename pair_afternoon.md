@@ -11,7 +11,7 @@ This assignment has three parts:
 
 1. Create a graph that is based on data from only one of the columns of the original data.  For example, this might be a histogram of that data.
 
-2. Create a graph that is based on data from only two columns of the original data.  This might me a scatterplot, a faceted histogram, etc.
+2. Create a graph that is based on data from only two columns of the original data.  This might be a scatterplot, a faceted histogram, etc.
 
 3. Create graph that is based on data from at least 3 columns of the original data.  This could be a colored scatterplot, a scatterplot matrix, faceted histograms, etc.
 
