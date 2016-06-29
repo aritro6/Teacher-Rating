@@ -1,13 +1,23 @@
 
-## Bay Area Bike Share
+## Part 1: Plotting with matplotlib
+
+Let's go over the basics of matplotlib.
+
+
+
+
+
+
+## Part 2: Real Data
+
 You will be exploring and graphing the data from the Bay Area Bike Share.  
 
-Download the data and review it well enough to understand the contents.  The data directory contains a README with further explanation.
+Import the data and review it well enough to understand the contents.  The data directory contains a README with further explanation.
 ```
 data/bay_area_bikeshare/README.txt
 ```
 
-This assignment has three parts:
+In order to better understand the relationships between various features of the data, you should:
 
 1. Create a graph that is based on data from only one of the columns of the original data.  For example, this might be a histogram of that data.
 
