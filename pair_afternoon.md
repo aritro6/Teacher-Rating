@@ -1,14 +1,18 @@
 
 ## Part 1: Plotting with matplotlib
 
-Let's go over the basics of matplotlib.
+Refer to today's [lecture files](https://github.com/zipfian/DSI_Lectures/blob/master/pandas-seaborn) for more examples. You may also find these links useful:
+- [matplotlib tutorial](http://matplotlib.org/users/pyplot_tutorial.html)
+- [More about matplotlib's Figure and Axes classes](http://matplotlib.org/users/artists.html)
+- [Seaborn tutorial](https://web.stanford.edu/~mwaskom/software/seaborn/tutorial.html)
+- [Plotting with pandas](http://pandas.pydata.org/pandas-docs/version/0.15.0/visualization.html)
 
 
 
 
 
 
-## Part 2: Real Data
+## Part 2: Bike Share Data
 
 You will be exploring and graphing the data from the Bay Area Bike Share.  
 
