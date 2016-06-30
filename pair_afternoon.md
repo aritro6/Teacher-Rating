@@ -17,10 +17,11 @@ If you are working in an ipython notebook, add the line
 ```python
 %matplotlib inline
 ```
-
->###### Pro tip zone
->- use ```plt.title()```, ```plt.xlabel()```, and ```plt.ylabel()``` to specify axis labels and plot titles
->- use ```plt.xlim()```, ```plt.ylim()```, and/or ```plt.axis()``` to change the range of values displayed on your plot. These functions take lists as arguments: ```[xmin, xmax]```, ```[ymin, ymax]```, and ```[xmin, xmax, ymin, ymax]``` respectively.
+___
+###### Pro tip zone
+- use ```plt.title()```, ```plt.xlabel()```, and ```plt.ylabel()``` to specify axis labels and plot titles
+- use ```plt.xlim()```, ```plt.ylim()```, and/or ```plt.axis()``` to change the range of values displayed on your plot. These functions take lists as arguments: ```[xmin, xmax]```, ```[ymin, ymax]```, and ```[xmin, xmax, ymin, ymax]``` respectively.
+___
 
 These tasks should help you get familiar with matplotlib basics:
 
@@ -30,9 +31,10 @@ These tasks should help you get familiar with matplotlib basics:
   x2 = np.random.randint(1000, size=50)
   ```
   Make a scatterplot of x1 vs. x2, and give the points different colors based on whether or not the sum of x1 and x2 for that point is even.  
->###### Pro tip zone
->- The ```c``` parameter of ```plt.scatter()``` accepts an array of the same length as your data specifying a color for each point, either as a string (such as 'r' or 'b') or as a number to which a colormap is applied (you can use the  ```cmap``` keyword argument to specify which colormap to use; pick your favorite [here](http://matplotlib.org/examples/color/colormaps_reference.html)). You can even pass it an array of booleans, since ```True``` will be treated as ```1``` and ```False``` as ```0```. Very useful for dichotomously categorized data!  
-
+___
+###### Pro tip zone
+ - The ```c``` parameter of ```plt.scatter()``` accepts an array of the same length as your data specifying a color for each point, either as a string (such as 'r' or 'b') or as a number to which a colormap is applied (you can use the  ```cmap``` keyword argument to specify which colormap to use; pick your favorite [here](http://matplotlib.org/examples/color/colormaps_reference.html)). You can even pass it an array of booleans, since ```True``` will be treated as ```1``` and ```False``` as ```0```. Very useful for dichotomously categorized data!  
+___
 2. Plot some functions
  - legends, linear, log
 
