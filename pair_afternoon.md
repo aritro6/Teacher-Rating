@@ -8,20 +8,21 @@ Refer to today's [lecture files](https://github.com/zipfian/DSI_Lectures/blob/ma
 - [Plotting with pandas](http://pandas.pydata.org/pandas-docs/version/0.15.0/visualization.html)
 
 Let's do some puzzles together. I'll show you a graph and a portion of the commands used to generate it, and you'll try to reproduce it.
+
 1. Plot some fake data
-- Plot some functions
+2. Plot some functions
  - labels, titles, legends, linear, log
-- Make a bar plot with rotated labels
-- make a scatterplot with colors based on labels
-- Make a 2x2 subplot
-- Save figures
-- plot in a notebook and in a script
-- multiple line/marker styles in one plot
-- pandas
+3. Make a bar plot with rotated labels
+4. make a scatterplot with colors based on labels
+5. Make a 2x2 subplot
+6. Save figures
+7. plot in a notebook and in a script
+8. multiple line/marker styles in one plot
+9. pandas
  - scatter plot
  - scattermatrix
  - histogram
-- seaborn
+10. seaborn
 
 
 ## Part 2: Bike Share Data
