@@ -23,6 +23,7 @@ If you are working in an ipython notebook, add the line
 - use ```plt.xlim()```, ```plt.ylim()```, and/or ```plt.axis()``` to change the range of values displayed on your plot. These functions take lists as arguments: ```[xmin, xmax]```, ```[ymin, ymax]```, and ```[xmin, xmax, ymin, ymax]``` respectively.
 
 These tasks should help you get familiar with matplotlib basics:
+
 1. The following code generates two arrays populated with integers from 0 to 999
   ```
   x1 = np.random.randint(1000, size=50)
