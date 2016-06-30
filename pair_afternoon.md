@@ -31,7 +31,7 @@ These tasks should help you get familiar with matplotlib basics:
   ```
   Make a scatterplot of x1 vs. x2, and give the points different colors based on whether or not the sum of x1 and x2 for that point is even.  
 >###### Pro tip zone
->  The ```c``` parameter of ```plt.scatter()``` accepts an array of the same length as your data specifying a color for each point, either as a string (such as 'r' or 'b') or as a number to which a colormap is applied (you can use the  ```cmap``` keyword argument to specify which colormap to use; pick your favorite [here](http://matplotlib.org/examples/color/colormaps_reference.html)). You can even pass it an array of booleans, since ```True``` will be treated as ```1``` and ```False``` as ```0```. Very useful for dichotomously categorized data!  
+>- The ```c``` parameter of ```plt.scatter()``` accepts an array of the same length as your data specifying a color for each point, either as a string (such as 'r' or 'b') or as a number to which a colormap is applied (you can use the  ```cmap``` keyword argument to specify which colormap to use; pick your favorite [here](http://matplotlib.org/examples/color/colormaps_reference.html)). You can even pass it an array of booleans, since ```True``` will be treated as ```1``` and ```False``` as ```0```. Very useful for dichotomously categorized data!  
 
 2. Plot some functions
  - legends, linear, log
