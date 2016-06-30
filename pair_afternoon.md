@@ -34,18 +34,27 @@ These tasks should help you get familiar with matplotlib basics:
 ###### Pro tip zone
 
   The ```c``` parameter of ```plt.scatter()``` accepts an array of the same length as your data specifying a color for each point, either as a string (such as 'r' or 'b') or as a number to which a colormap is applied (you can use the  ```cmap``` keyword argument to specify which colormap to use; pick your favorite [here](http://matplotlib.org/examples/color/colormaps_reference.html)). You can even pass it an array of booleans, since ```True``` will be treated as ```1``` and ```False``` as ```0```. Very useful for dichotomously categorized data!  
+
 2. Plot some functions
  - legends, linear, log
+
 3. Make a bar plot with rotated labels
+
 4. make a scatterplot with colors based on labels
+
 5. Make a 2x2 subplot
+
 6. Save figures
+
 7. plot in a notebook and in a script
+
 8. multiple line/marker styles in one plot
+
 9. pandas
  - scatter plot
  - scattermatrix
  - histogram
+
 10. seaborn
 
 
