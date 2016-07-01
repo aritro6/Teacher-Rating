@@ -18,43 +18,46 @@ If you are working in an ipython notebook, add the line
 %matplotlib inline
 ```
 
->#### Pro tip zone
+
+#### Pro tip zone
 - use ```plt.title()```, ```plt.xlabel()```, and ```plt.ylabel()``` to specify axis labels and plot titles
 - use ```plt.xlim()```, ```plt.ylim()```, and/or ```plt.axis()``` to change the range of values displayed on your plot. These functions take lists as arguments: ```[xmin, xmax]```, ```[ymin, ymax]```, and ```[xmin, xmax, ymin, ymax]``` respectively.
 
-These tasks should help you get familiar with matplotlib basics:
+
+#### These tasks should help familiarize you with the matplotlib basics
 
 1. The following code generates two arrays populated with integers from 0 to 999
+  ```python
+  x = np.random.randint(1000, size=50)
+  y = np.random.randint(1000, size=50)
   ```
-  x1 = np.random.randint(1000, size=50)
-  x2 = np.random.randint(1000, size=50)
-  ```
-  Make a scatterplot of x1 vs. x2, and give the points different colors based on whether or not the sum of x1 and x2 for that point is even.  
+  Make a scatterplot of x vs. y, and give the points different colors based on whether or not the sum of x and y for that point is even.  
 
- >#### Pro tip zone
- >  - The ```c``` parameter of ```plt.scatter()``` accepts an array of the same length as your data specifying a color for each point, either as a string (such as 'r' or 'b') or as a number to which a colormap is applied (you can use the  ```cmap``` keyword argument to specify which colormap to use; pick your favorite [here](http://matplotlib.org/examples/color/colormaps_reference.html)). You can even pass it an array of booleans, since ```True``` will be treated as ```1``` and ```False``` as ```0```. Very useful for dichotomously categorized data!  
+ #### Pro tip zone
+   - The ```c``` keyword argument of ```plt.scatter()``` accepts an array of the same length as your data specifying a color for each point, either as a string (such as ```'r'``` or ```'b'```) or as a number to which a colormap is applied (you can use the  ```cmap``` keyword argument to specify which colormap to use; pick your favorite [here](http://matplotlib.org/examples/color/colormaps_reference.html)). You can even pass it an array of booleans, since ```True``` will be treated as ```1``` and ```False``` as ```0```. Very useful for dichotomously categorized data! Use ```plt.colorbar()``` to display the colormap on the plot.
 
-2. Plot some functions
- - legends, linear, log
+2. Plot the functions ```y = 3x + 0.5``` and ```y = 5*sqrt(x)``` on the same graph. Remember that ```plt.plot()``` takes an array of x-values and an array of y-values. You may find ```np.arange()``` or ```np.linspace()``` helpful.
+ - Add a legend using ```plt.legend()```. Note that you'll have to specify ```label='something'``` for each ```plt.plot()``` command.
+ - How does this graph look with x and/or y on a log scale? Use ```plt.xscale()```
+ - Change the color, [line style](http://matplotlib.org/api/lines_api.html#matplotlib.lines.Line2D.set_linestyle) and [marker style](http://matplotlib.org/api/markers_api.html#module-matplotlib.markers) using the "format string" shorthand.  
+ For example, ```plt.plot(x, y, 'k--*')``` would plot a black (```'k'```) dashed (```'--'```) line with asterisks (```'*'```) at each point.
 
 3. Make a bar plot with rotated labels
 
-4. make a scatterplot with colors based on labels
+4. Make a 2x2 subplot
 
-5. Make a 2x2 subplot
+5. Save figures
 
-6. Save figures
+6. plot in a notebook and in a script
 
-7. plot in a notebook and in a script
+7. multiple line/marker styles in one plot
 
-8. multiple line/marker styles in one plot
-
-9. pandas
+8. pandas
  - scatter plot
  - scattermatrix
  - histogram
 
-10. seaborn
+9. seaborn
 
 
 ## Part 2: Bike Share Data
