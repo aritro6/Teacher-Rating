@@ -39,7 +39,7 @@ If you are running a script, call ```plt.figure()``` before each figure and ```p
  #### Pro tip zone
    - The ```c``` keyword argument of ```plt.scatter()``` accepts an array of the same length as your data specifying a color for each point, either as a string (such as ```'r'``` or ```'b'```) or as a number to which a colormap is applied (you can use the  ```cmap``` keyword argument to specify which colormap to use; pick your favorite [here](http://matplotlib.org/examples/color/colormaps_reference.html)). You can even pass it an array of booleans, since ```True``` will be treated as ```1``` and ```False``` as ```0```. Very useful for dichotomously categorized data! Use ```plt.colorbar()``` to display the colormap on the plot.
 
-1. Plot the functions ```y = 3x + 0.5``` and ```y = 5*sqrt(x)``` on the same figure. Remember that ```plt.plot()``` takes an array of x-values and an array of y-values. You may find ```np.arange()``` or ```np.linspace()``` helpful.
+1. Plot the functions ```y = 3x + 0.5``` and ```y = 5*sqrt(x)``` on the same figure for values of `x` between 0 and 5. Remember that ```plt.plot()``` takes an array of x-values and an array of y-values. You may find ```np.arange()``` or ```np.linspace()``` helpful.
  - Add a legend using ```plt.legend()```. Note that you'll have to specify ```label='something'``` for each ```plt.plot()``` command.
  - How does this graph look with x and/or y on a log scale? Use ```plt.xscale()```
  - Change the color, [line style](http://matplotlib.org/api/lines_api.html#matplotlib.lines.Line2D.set_linestyle) and [marker style](http://matplotlib.org/api/markers_api.html#module-matplotlib.markers) using the "format string" shorthand.  
