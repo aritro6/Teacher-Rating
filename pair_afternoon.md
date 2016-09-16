@@ -31,10 +31,10 @@ If you are running a script, call ```plt.figure()``` before each figure and ```p
 
 1. The following code generates two arrays populated with integers from 0 to 999
   ```python
-  x = np.random.randint(1000, size=50)
-  y = np.random.randint(1000, size=50)
+  a = np.random.randint(1000, size=50)
+  b = np.random.randint(1000, size=50)
   ```
-  Make a scatterplot of x vs. y, and give the points different colors based on whether or not the sum of x and y for that point is even.  
+  Make a scatterplot of a vs. b, and give the points different colors based on whether or not the sum of a and b for that point is even.  
 
  #### Pro tip zone
    - The ```c``` keyword argument of ```plt.scatter()``` accepts an array of the same length as your data specifying a color for each point, either as a string (such as ```'r'``` or ```'b'```) or as a number to which a colormap is applied (you can use the  ```cmap``` keyword argument to specify which colormap to use; pick your favorite [here](http://matplotlib.org/examples/color/colormaps_reference.html)). You can even pass it an array of booleans, since ```True``` will be treated as ```1``` and ```False``` as ```0```. Very useful for dichotomously categorized data! Use ```plt.colorbar()``` to display the colormap on the plot.
