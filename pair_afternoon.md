@@ -23,8 +23,11 @@ If you are running a script, call ```plt.figure()``` before each figure and ```p
 
 #### Pro tip zone
 - You can change the default style of your plots with ```plt.style.use()```. You can view your options with ```plt.style.available```
-- Use ```plt.title()```, ```plt.xlabel()```, and ```plt.ylabel()``` to specify axis labels and plot titles
-- Use ```plt.xlim()```, ```plt.ylim()```, and/or ```plt.axis()``` to change the range of values displayed on your plot. These functions take lists as arguments: ```[xmin, xmax]```, ```[ymin, ymax]```, and ```[xmin, xmax, ymin, ymax]``` respectively.
+
+There are two ways to create plots in `matplotlib`.  You can create figures and axies using `plt.subplots` or `fig.add_subplot`, and then work with the axies directly like `ax.scatter`, or you can work with the axies *implicitly* using the convienience functions like `plt.scatter`.  We will refer to the first style here, as it is more flexible and modern.
+
+- Use ```ax.title()```, ```ax.xlabel()```, and ```ax.ylabel()``` to specify axis labels and plot titles
+- Use ```ax.xlim()```, ```ax.ylim()```, and/or ```ax.axis()``` to change the range of values displayed on your plot. These functions take lists as arguments: ```[xmin, xmax]```, ```[ymin, ymax]```, and ```[xmin, xmax, ymin, ymax]``` respectively.
 
 
 #### These tasks should help familiarize you with the matplotlib basics
@@ -37,43 +40,26 @@ If you are running a script, call ```plt.figure()``` before each figure and ```p
   Make a scatterplot of a vs. b, and give the points different colors based on whether or not the sum of a and b for that point is even.  
 
  #### Pro tip zone
-   - The ```c``` keyword argument of ```plt.scatter()``` accepts an array of the same length as your data specifying a color for each point, either as a string (such as ```'r'``` or ```'b'```) or as a number to which a colormap is applied (you can use the  ```cmap``` keyword argument to specify which colormap to use; pick your favorite [here](http://matplotlib.org/examples/color/colormaps_reference.html)). You can even pass it an array of booleans, since ```True``` will be treated as ```1``` and ```False``` as ```0```. Very useful for dichotomously categorized data! Use ```plt.colorbar()``` to display the colormap on the plot.
+   - The ```c``` keyword argument of ```ax.scatter()``` accepts an array of the same length as your data specifying a color for each point, either as a string (such as ```'r'``` or ```'b'```) or as a number to which a colormap is applied (you can use the  ```cmap``` keyword argument to specify which colormap to use; pick your favorite [here](http://matplotlib.org/examples/color/colormaps_reference.html)). You can even pass it an array of booleans, since ```True``` will be treated as ```1``` and ```False``` as ```0```. Very useful for dichotomously categorized data! Use ```ax.colorbar()``` to display the colormap on the plot.
 
-1. Plot the functions ```y = 3x + 0.5``` and ```y = 5*sqrt(x)``` on the same figure for values of `x` between 0 and 5. Remember that ```plt.plot()``` takes an array of x-values and an array of y-values. You may find ```np.arange()``` or ```np.linspace()``` helpful.
- - Add a legend using ```plt.legend()```. Note that you'll have to specify ```label='something'``` for each ```plt.plot()``` command.
- - How does this graph look with x and/or y on a log scale? Use ```plt.xscale()```
+1. Plot the functions ```y = 3x + 0.5``` and ```y = 5*sqrt(x)``` on the same figure for values of `x` between 0 and 5. Remember that ```ax.plot()``` takes an array of x-values and an array of y-values. You may find ```np.arange()``` or ```np.linspace()``` helpful.
+ - Add a legend using ```ax.legend()```. Note that you'll have to specify ```label='something'``` for each ```ax.plot()``` command.
+ - How does this graph look with x and/or y on a log scale? Use ```ax.xscale()```
  - Change the color, [line style](http://matplotlib.org/api/lines_api.html#matplotlib.lines.Line2D.set_linestyle) and [marker style](http://matplotlib.org/api/markers_api.html#module-matplotlib.markers) using the "format string" shorthand.  
- For example, ```plt.plot(x, y, 'k--*')``` would plot a black (```'k'```) dashed (```'--'```) line with asterisks (```'*'```) at each point.
+ For example, ```ax.plot(x, y, 'k--*')``` would plot a black (```'k'```) dashed (```'--'```) line with asterisks (```'*'```) at each point.
 
 1. The following code generates a bar plot
  ```python
  barheights = [3,5,1]
  barlabels = ['grapes', 'oranges', 'hockey pucks']
- plt.bar(np.arange(len(barheights)), barheights)
- plt.xticks(np.arange(len(barheights)), barlabels, rotation=45)
- plt.show()
+ fig, ax = plt.subplots()
+ ax.bar(np.arange(len(barheights)), barheights)
+ ax.xticks(np.arange(len(barheights)), barlabels, rotation=45)
+ ax.show()
  ```
  How would you change the x-position of the labels?
 
 1. Make a 2x2 subplot of four plots so far.
-  ```python
-  plt.figure(figsize=(8,8)) # use this to change the size of the figure
-
-  plt.subplot(2, 2, 1) # (rows, columns, subplot index)
-  ### plotting code here
-
-  plt.subplot(2, 2, 2)
-  ### plotting code here
-
-  plt.subplot(2, 2, 3)
-  ### plotting code here
-
-  plt.subplot(2, 2, 4)
-  ### plotting code here
-
-  plt.tight_layout() # ensures that plot titles and axis labels don't overlap
-  plt.show()
-  ```
 
 1. Save the last figure using ```plt.savefig()```
 
@@ -127,7 +113,7 @@ with open('data/bay_area_bikeshare/201402_weather_data_v2.csv') as f:
   weather = np.loadtxt(filepath, delimiter=',', skiprows=1, usecols=cols)
   ```
 
-1. Make some scatterplots and histograms using some of these columns. Sometimes you have to change the number of ```bins``` in ```plt.hist()``` to get something informative.
+1. Make some scatterplots and histograms using some of these columns. Sometimes you have to change the number of ```bins``` in ```ax.hist()``` to get something informative.
 
 #### Importing data with pandas
 1. Pandas will conveniently label the columns automatically. How nice!  
