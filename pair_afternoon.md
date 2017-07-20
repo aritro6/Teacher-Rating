@@ -50,12 +50,13 @@ There are two ways to create plots in `matplotlib`.  You can create figures and 
 
 1. The following code generates a bar plot
  ```python
- barheights = [3,5,1]
- barlabels = ['grapes', 'oranges', 'hockey pucks']
- fig, ax = plt.subplots()
- ax.bar(np.arange(len(barheights)), barheights)
- ax.xticks(np.arange(len(barheights)), barlabels, rotation=45)
- ax.show()
+barheights = [3,5,1]
+barlabels = ['grapes', 'oranges', 'hockey pucks']
+fig, ax = plt.subplots()
+ax.bar(np.arange(len(barheights)), barheights)
+x_pos = np.arange(len(barheights))
+ax.set_xticks(x_pos)
+ax.set_xticklabels(barlabels, rotation=45)
  ```
  How would you change the x-position of the labels?
 
