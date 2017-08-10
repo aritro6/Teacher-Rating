@@ -44,7 +44,7 @@ There are two ways to create plots in `matplotlib`.  You can create figures and 
 
 1. Plot the functions ```y = 3x + 0.5``` and ```y = 5*sqrt(x)``` on the same figure for values of `x` between 0 and 5. Remember that ```ax.plot()``` takes an array of x-values and an array of y-values. You may find ```np.arange()``` or ```np.linspace()``` helpful.
  - Add a legend using ```ax.legend()```. Note that you'll have to specify ```label='something'``` for each ```ax.plot()``` command.
- - How does this graph look with x and/or y on a log scale? Use ```ax.xscale()```
+ - How does this graph look with x and/or y on a log scale? Use ```ax.set_xscale()```
  - Change the color, [line style](http://matplotlib.org/api/lines_api.html#matplotlib.lines.Line2D.set_linestyle) and [marker style](http://matplotlib.org/api/markers_api.html#module-matplotlib.markers) using the "format string" shorthand.  
  For example, ```ax.plot(x, y, 'k--*')``` would plot a black (```'k'```) dashed (```'--'```) line with asterisks (```'*'```) at each point.
 
